@@ -18,7 +18,7 @@ const noSearchInfomation = document.querySelector(".noSearchInformation");
 axios.get("https://raw.githubusercontent.com/hexschool/js-training/main/travelApi.json")
   .then(function (response) {
     data = response.data.data;
-    renderData(data);
+    init();
   })
 
 // 渲染畫面
@@ -135,6 +135,9 @@ locationSearch.addEventListener("change", function (e) {
   }
 })
 
+function init(){
+  renderData(data);
+}
 
 
 
